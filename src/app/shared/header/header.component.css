@@ -1,0 +1,6 @@
+  .nav-link-custom {
+    font-size: 1.1rem;   /* slightly larger font */
+    font-weight: 500;    /* medium bold for better readability */
+    letter-spacing: 0.5px; /* spacing between letters */
+    text-transform: uppercase;
+  }

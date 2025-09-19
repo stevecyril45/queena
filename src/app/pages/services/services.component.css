@@ -1,0 +1,29 @@
+/* Make the column a flex container */
+.row.pb-0.pb-xl-2,
+.row.mt-4 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Make each column a flex item and stretch card height */
+.col-sm-6.col-xl-3 {
+  display: flex;
+}
+
+/* Make the card fill the column height */
+.services-style-01 {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto; /* stretch to fill column */
+}
+
+/* Make the info section grow so content aligns properly */
+.services-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-content {
+  flex-grow: 1;
+}

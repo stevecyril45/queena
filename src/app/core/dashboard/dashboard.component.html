@@ -1,0 +1,24 @@
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-lg-6 mt-5 mt-lg-0">
+      <h2>Submissions Dashboard</h2>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sub of submissions">
+            <td>{{ sub.name }}</td>
+            <td>{{ sub.subject }}</td>
+            <td>{{ sub.email }}</td>
+            <td>{{ sub.phone }}</td>
+            <td>{{ sub.message }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
