@@ -1,4 +1,174 @@
-footer{
-    background-color:#347843 ;
-    color:white;
+/*=================================
+  Footer Styles
+=================================*/
+
+/* General Footer Styling */
+.footer {
+  background-color: #347843;
+  color: #fff;
+  padding-top: 60px;
+}
+
+.footer .container {
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 40px;
+}
+
+/* Common Widget Styles */
+.footer-widget {
+  margin-bottom: 25px;
+}
+
+.widget-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Contact Info Section */
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.footer-contact i {
+  font-size: 1.2rem;
+  width: 20px;
+  margin-top: 3px;
+  margin-right: 15px;
+  color: #f7a900; /* Accent color for icons */
+}
+
+.footer-contact .contact-info p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Branch List Section */
+.branch-intro {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.branch-list li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.branch-list i {
+  color: #f7a900;
+  margin-right: 10px;
+}
+
+/* Links Sections */
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  opacity: 0.9;
+}
+
+.footer-links a:hover {
+  color: #f7a900;
+  opacity: 1;
+}
+
+/* Call Center & Social Media */
+.call-center h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.call-center p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.social-icons p {
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.social-icons li {
+  margin-right: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f7a900;
+}
+
+/* Copyright Area */
+.copyright-area {
+  padding: 20px 0;
+}
+
+.footer-logo {
+  max-width: 150px;
+  height: auto;
+}
+
+.copyright-area p {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .footer-widget {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .copyright-area .row {
+    flex-direction: column;
+  }
+  .copyright-area .col-md-6:last-child {
+    text-align: center !important;
+  }
+}
+
+/* Back to Top button */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: #f7a900;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#back-to-top a {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+#back-to-top:hover {
+  background-color: #e69d00;
 }

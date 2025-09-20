@@ -4,3 +4,18 @@
     letter-spacing: 0.5px; /* spacing between letters */
     text-transform: uppercase;
   }
+  header{
+    background-color: white;
+  }
+  .container{
+    color: black;
+  }
+  #container{
+    background-color:#347843 ;
+  }
+  a{
+    color: white;
+  }
+  .nav{
+    gap:70px;
+  }

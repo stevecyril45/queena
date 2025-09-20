@@ -1,24 +1,40 @@
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<div class="col-lg-6 mt-5 mt-lg-0">
-      <h2>Submissions Dashboard</h2>
-      <table class="table table-bordered table-striped">
-        <thead class="thead-dark">
-          <tr>
-            <th>Name</th>
-            <th>Subject</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Message</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let sub of submissions">
-            <td>{{ sub.name }}</td>
-            <td>{{ sub.subject }}</td>
-            <td>{{ sub.email }}</td>
-            <td>{{ sub.phone }}</td>
-            <td>{{ sub.message }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<br><br><br><br>
+<div class="table-responsive">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Your Name</th>
+        <th>Your Email</th>
+        <th>Subject</th>
+        <th>Message</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of paginatedRecords(); let i = index">
+        <td>{{ (currentPage - 1) * pageSize + i + 1 }}</td>
+        <td>{{ record.name }}</td>
+        <td>{{ record.email }}</td>
+        <td>{{ record.subject }}</td>
+        <td>{{ record.message }}</td>
+        <td>
+          <button class="btn-delete" (click)="deleteRecord(record)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Pagination Controls -->
+<div class="pagination-controls">
+  <button (click)="prevPage()" [disabled]="currentPage === 1">Prev</button>
+  <span>Page {{ currentPage }} of {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+</div>
+
+<!-- Delete All on Current Page -->
+<div class="delete-page-btn">
+  <button (click)="deletePageRecords()">Delete All on This Page</button>
+</div>
+<br><br>

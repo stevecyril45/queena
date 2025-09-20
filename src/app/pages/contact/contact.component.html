@@ -1,9 +1,11 @@
-<section class="inner-header bg-holder bg-overlay-dark-40" style="background-image: url('../../../assets/images/home/3.png'); height: 500px;">
+<section class="inner-header bg-holder bg-overlay-dark-40"
+  style="background-image: url('../../../assets/images/home/3.png'); height: 500px;">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
         <h1 class="inner-title text-white mb-3">Contact Us</h1>
-        <p class="inner-subtitle text-white">For seamless cargo management, faster clearance, secure storage, and cost-effective logistics, we are here to assist you.</p>
+        <p class="inner-subtitle text-white">For seamless cargo management, faster clearance, secure storage, and
+          cost-effective logistics, we are here to assist you.</p>
       </div>
     </div>
   </div>
@@ -28,11 +30,9 @@ Inner Header -->
 Meet our team -->
 <section>
   <div id="map-container">
-    <iframe
-      width="100%"
-      height="80%"
-      frameborder="0" style="border:0"
-      src="https://www.google.com/maps?q=47+Dada+Onijama+Street,+Awodi-Ora+Estate,+Otto-Wharf,+Lagos,+Nigeria&hl=en&z=17&output=embed" allowfullscreen>
+    <iframe width="100%" height="80%" frameborder="0" style="border:0"
+      src="https://www.google.com/maps?q=47+Dada+Onijama+Street,+Awodi-Ora+Estate,+Otto-Wharf,+Lagos,+Nigeria&hl=en&z=17&output=embed"
+      allowfullscreen>
     </iframe>
   </div>
 </section>
@@ -46,25 +46,31 @@ form -->
     <div class="row">
       <div class="col-xl-8 col-md-6 mb-4 mb-md-0">
         <h2 class="mb-5">Need Assistance? Please Complete The Contact Form</h2>
-        <form>
+        <form (ngSubmit)="submitForm()" #contactForm="ngForm">
           <div class="form-row">
             <div class="form-group col-lg-6">
-              <input type="text" class="form-control" placeholder="Your name">
+              <input type="text" class="form-control" placeholder="Your name" name="name" [(ngModel)]="contact.name"
+                required>
             </div>
             <div class="form-group col-lg-6">
-              <input type="text" class="form-control" placeholder="Subject">
+              <input type="text" class="form-control" placeholder="Subject" name="subject" [(ngModel)]="contact.subject"
+                required>
             </div>
             <div class="form-group col-lg-6">
-              <input type="email" class="form-control" placeholder="Your email">
+              <input type="email" class="form-control" placeholder="Your email" name="email" [(ngModel)]="contact.email"
+                required>
             </div>
             <div class="form-group col-lg-6">
-              <input type="text" class="form-control" placeholder="Phone">
+              <input type="text" class="form-control" placeholder="Phone" name="phone" [(ngModel)]="contact.phone">
             </div>
             <div class="form-group col-lg-12">
-              <textarea class="form-control" placeholder="Your message" rows="5"></textarea>
+              <textarea class="form-control" placeholder="Your message" rows="5" name="message"
+                [(ngModel)]="contact.message" required></textarea>
             </div>
             <div class="form-group col-lg-12">
-              <button type="submit" class="btn btn-primary">Send Message<i class="fas fa-long-arrow-alt-right ml-3"></i></button>
+              <button type="submit" class="btn btn-dark mt-4">Send Message
+                <i class="fas fa-long-arrow-alt-right ml-3"></i>
+              </button>
             </div>
           </div>
         </form>
@@ -83,6 +89,25 @@ form -->
     </div>
   </div>
 </section>
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="successModalLabel">Message Sent</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Thank you! Your message has been successfully sent. We will contact you shortly.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
 <!--=================================
 form -->
 
@@ -102,7 +127,8 @@ Contact Info -->
         <div class="text-center p-4 p-md-5 border h-100">
           <i class="feature-icon flaticon-headphone fa-4x text-primary"></i>
           <h4 class="mt-4">Our Support Center</h4>
-          <p class="mb-0">Queena Investment Limited customer support is available for all logistics inquiries and assistance.</p>
+          <p class="mb-0">Queena Investment Limited customer support is available for all logistics inquiries and
+            assistance.</p>
         </div>
       </div>
       <div class="col-md-4 mb-4 mb-md-0">

@@ -1,0 +1,45 @@
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.styled-table th,
+.styled-table td {
+  border: 2px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+.styled-table th {
+  background: #f2f2f2;
+}
+
+.btn-delete {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-delete:hover {
+  background: darkred;
+}
+
+.pagination-controls {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.pagination-controls button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.delete-page-btn {
+  text-align: center;
+  margin-top: 10px;
+}

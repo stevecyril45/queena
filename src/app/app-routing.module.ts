@@ -8,6 +8,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { DashboardComponent } from './core/dashboard/dashboard.component';
 import { LoginDashboardComponent } from './core/login-dashboard/login-dashboard.component';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   {path: '', component: IndexComponent },
@@ -17,10 +18,11 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent },
   {path: 'contact', component: ContactComponent },
   {path: 'services', component: ServicesComponent },
-  {path: 'dashboard', component: DashboardComponent },
-  {path: 'login', component: LoginDashboardComponent }
-];
-
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+   { path: 'login', component: LoginDashboardComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: '**', redirectTo: '/login' }
+]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
