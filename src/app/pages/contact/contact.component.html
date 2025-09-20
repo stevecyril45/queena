@@ -15,7 +15,7 @@
     <div class="row">
       <div class="col-md-12">
         <ol class="breadcrumb bg-transparent mb-0">
-          <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home mr-1"></i>Home</a></li>
+          <li class="breadcrumb-item"><a routerLink="/index"><i class="fas fa-home mr-1"></i>Home</a></li>
           <li class="breadcrumb-item active"><span>Contact us</span></li>
         </ol>
       </div>
@@ -46,34 +46,56 @@ form -->
     <div class="row">
       <div class="col-xl-8 col-md-6 mb-4 mb-md-0">
         <h2 class="mb-5">Need Assistance? Please Complete The Contact Form</h2>
-        <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
           <div class="form-row">
+            <!-- Name -->
             <div class="form-group col-lg-6">
-              <input type="text" class="form-control" placeholder="Your name" name="name" [(ngModel)]="contact.name"
-                required>
+              <input type="text" class="form-control" placeholder="Your name" formControlName="name">
+              <div *ngIf="(f['name'].touched || submitted) && f['name'].invalid" class="text-danger">
+                Name is required
+              </div>
             </div>
+
+            <!-- Subject -->
             <div class="form-group col-lg-6">
-              <input type="text" class="form-control" placeholder="Subject" name="subject" [(ngModel)]="contact.subject"
-                required>
+              <input type="text" class="form-control" placeholder="Subject" formControlName="subject">
+              <div *ngIf="(f['subject'].touched || submitted) && f['subject'].invalid" class="text-danger">
+                Subject is required
+              </div>
             </div>
+
+            <!-- Email -->
             <div class="form-group col-lg-6">
-              <input type="email" class="form-control" placeholder="Your email" name="email" [(ngModel)]="contact.email"
-                required>
+              <input type="email" class="form-control" placeholder="Your email" formControlName="email">
+              <div *ngIf="(f['email'].touched || submitted) && f['email'].errors" class="text-danger">
+                <span *ngIf="f['email'].errors['required']">Email is required</span>
+                <span *ngIf="f['email'].errors['email']">Enter a valid email</span>
+              </div>
             </div>
+
+            <!-- Phone -->
             <div class="form-group col-lg-6">
-              <input type="text" class="form-control" placeholder="Phone" name="phone" [(ngModel)]="contact.phone">
+              <input type="number" class="form-control" placeholder="Phone" formControlName="phone">
             </div>
+
+            <!-- Message -->
             <div class="form-group col-lg-12">
-              <textarea class="form-control" placeholder="Your message" rows="5" name="message"
-                [(ngModel)]="contact.message" required></textarea>
+              <textarea class="form-control" placeholder="Your message" rows="5" formControlName="message"></textarea>
+              <div *ngIf="(f['message'].touched || submitted) && f['message'].invalid" class="text-danger">
+                Message is required
+              </div>
             </div>
+
+            <!-- Submit -->
             <div class="form-group col-lg-12">
-              <button type="submit" class="btn btn-dark mt-4">Send Message
-                <i class="fas fa-long-arrow-alt-right ml-3"></i>
+              <button type="submit" class="btn btn-dark mt-4">
+                Send Message <i class="fas fa-long-arrow-alt-right ml-3"></i>
               </button>
             </div>
           </div>
         </form>
+
+
       </div>
       <div class="col-11 col-md-6 col-xl-4 mb-3 mb-md-0">
         <div class="transport-service-info bg-overlay-dark-50">

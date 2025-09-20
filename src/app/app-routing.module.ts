@@ -24,7 +24,8 @@ const routes: Routes = [
   { path: '**', redirectTo: '/login' }
 ]
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled', // ✅ ensures top scroll
+    anchorScrolling: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
