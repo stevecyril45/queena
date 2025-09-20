@@ -10,19 +10,19 @@ import { DashboardComponent } from './core/dashboard/dashboard.component';
 import { LoginDashboardComponent } from './core/login-dashboard/login-dashboard.component';
 import { AuthGuard } from './core/guards/auth.guard';
 
-const routes: Routes = [
-  {path: '', component: IndexComponent },
-  {path: 'index', component:IndexComponent },
-  { path: 'header', component:HeaderComponent },
-  {path: 'footer', component:FooterComponent },
-  {path: 'about', component: AboutComponent },
-  {path: 'contact', component: ContactComponent },
-  {path: 'services', component: ServicesComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-   { path: 'login', component: LoginDashboardComponent },
+ const routes: Routes = [
+  { path: '', component: IndexComponent, pathMatch: 'full' }, // 👈 Default landing
+  { path: 'index', component: IndexComponent },
+  { path: 'header', component: HeaderComponent },
+  { path: 'footer', component: FooterComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'services', component: ServicesComponent },
+  { path: 'login', component: LoginDashboardComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: '**', redirectTo: '/login' }
-]
+  { path: '**', redirectTo: '' } // 👈 fallback goes to home instead of login
+];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled', // ✅ ensures top scroll
     anchorScrolling: 'enabled'})],
