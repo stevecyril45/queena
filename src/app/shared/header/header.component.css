@@ -1,21 +1,64 @@
-  .nav-link-custom {
-    font-size: 1.1rem;   /* slightly larger font */
-    font-weight: 500;    /* medium bold for better readability */
-    letter-spacing: 0.5px; /* spacing between letters */
-    text-transform: uppercase;
+.nav-link-custom {
+  font-size: 1.1rem;   /* slightly larger font */
+  font-weight: 500;    /* medium bold for better readability */
+  letter-spacing: 0.5px; /* spacing between letters */
+  text-transform: uppercase;
+}
+
+header {
+  background-color: white;
+}
+
+.container {
+  color: black;
+}
+
+#container {
+  background-color:#347843 ;
+}
+
+a {
+  color: white;
+}
+
+.nav {
+  gap:70px;
+}
+
+@media (max-width:991px){
+  .nav {
+    gap:10px;
   }
-  header{
-    background-color: white;
-  }
-  .container{
-    color: black;
-  }
-  #container{
-    background-color:#347843 ;
-  }
-  a{
-    color: white;
-  }
-  .nav{
-    gap:70px;
-  }
+}
+
+/* Change hamburger background */
+.navbar-toggler {
+  background-color: #347843 !important;
+  border: none; /* optional, to remove border */
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+/* Change the icon color inside */
+.navbar-toggler .fas {
+  color: #fff !important; /* keeps the icon visible */
+  font-size: 20px;        /* adjust if needed */
+}
+
+/* Dropdown background */
+.navbar-collapse {
+  background-color: #347843 !important;
+  padding: 10px;
+}
+
+/* Ensure links stay visible */
+.navbar-collapse .nav-link {
+  color: #fff !important;
+  border: none !important;  /* ✅ remove the bottom/side borders */
+}
+
+/* Optional: highlight on hover */
+.navbar-collapse .nav-link:hover {
+  background-color: #2a6135;
+  color: #FFA000 !important; /* matches your accent color */
+}

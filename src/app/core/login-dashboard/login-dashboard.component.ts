@@ -14,7 +14,7 @@ export class LoginDashboardComponent {
   errorMessage = '';
 
   // Hardcoded credentials
-  private readonly correctUsername = 'Queena_Admin_2025!';
+  private readonly correctUsername = 'Queena-Admin_2025!';
   private readonly correctPassword = 'Qn!9f$Z3@xT7#LpV';
 
   constructor(
