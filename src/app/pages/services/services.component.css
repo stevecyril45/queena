@@ -23,7 +23,33 @@
   display: flex;
   flex-direction: column;
 }
+/* Force equal fixed height for all service boxes */
 
-.services-content {
-  flex-grow: 1;
+
+@media (max-width: 767.98px) {
+  #servicesCarousel .col-md-3 {
+    margin-bottom: 20px; /* adjust spacing as needed */
+  }
+
+  /* optional: remove margin-bottom from the last card in a slide */
+  #servicesCarousel .col-md-3:last-child {
+    margin-bottom: 0;
+  }
+}
+/* Force 2 per row on medium screens */
+@media (min-width: 768px) and (max-width: 1008px) {
+  #servicesCarousel .carousel-item .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+}
+/* Force 2 per row on medium screens */
+
+@media (min-width: 1008px) {
+#servicesCarousel .services-style-01 {
+  height: 500px; /* adjust value to fit your design */
+  display: flex;
+  flex-direction: column;
+}
 }

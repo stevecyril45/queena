@@ -13,6 +13,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { DashboardComponent } from './core/dashboard/dashboard.component';
 import { LoginDashboardComponent } from './core/login-dashboard/login-dashboard.component';
+import { AnimateOnScrollDirective } from './core/animate-on-scroll.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LoginDashboardComponent } from './core/login-dashboard/login-dashboard.
     ServicesComponent,
     DashboardComponent,
     LoginDashboardComponent,
+    AnimateOnScrollDirective,
   ],
   imports: [
     BrowserModule,
