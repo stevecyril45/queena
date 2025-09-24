@@ -12,7 +12,8 @@ declare var window: any;
 export class ContactComponent implements OnInit {
   contactForm!: FormGroup;
   private successModal: any;
-  submitted = false; // <-- new flag
+  submitted = false;
+  contacts: any[] = [];   // ✅ hold contacts
 
   constructor(private fb: FormBuilder, private contactService: ContactService) {}
 
@@ -27,10 +28,23 @@ export class ContactComponent implements OnInit {
 
     const modalElement = document.getElementById('successModal');
     this.successModal = new window.bootstrap.Modal(modalElement);
+
+    // ✅ Load contacts on page load
+    this.loadContacts();
+  }
+
+  loadContacts() {
+    this.contactService.getContacts().subscribe(
+      data => {
+        this.contacts = data;
+        console.log('Contacts fetched:', this.contacts);
+      },
+      error => console.error('Error loading contacts:', error)
+    );
   }
 
   submitForm() {
-    this.submitted = true; // mark form as submitted
+    this.submitted = true;
 
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();
@@ -38,12 +52,15 @@ export class ContactComponent implements OnInit {
     }
 
     this.contactService.addContact(this.contactForm.value).subscribe(
-      (res: any) => {
+      res => {
         this.contactForm.reset();
-        this.submitted = false; // reset submission state
+        this.submitted = false;
         this.successModal.show();
+
+        // ✅ refresh list after adding
+        this.loadContacts();
       },
-      (err: any) => console.error(err)
+      err => console.error(err)
     );
   }
 

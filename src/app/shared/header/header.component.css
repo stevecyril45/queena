@@ -33,7 +33,7 @@
 }
 
 /* Change the icon color inside */
-.navbar-toggler .fas {
+.navbar-toggler .fas { 
   color: #fff !important; /* keeps the icon visible */
   font-size: 20px;        /* adjust if needed */
 }
@@ -49,7 +49,20 @@
 }
 
 /* Optional: highlight on hover */
-.navbar-collapse .nav-link:hover {
-  background-color: #2a6135;
-  color: #FFA000 !important; /* matches your accent color */
-}  
+
+/* Default nav link colors */
+.header-sticky .navbar .nav-link {
+  color: white !important;
+  transition: all 0.3s ease;
+}
+
+/* Sticky state — only for this header nav */
+.header-sticky .navbar.sticky-top,
+.header-sticky .navbar.fixed-top {
+  background-color: white !important;
+}
+
+.header-sticky .navbar.sticky-top .nav-link,
+.header-sticky .navbar.fixed-top .nav-link {
+  color: black !important;
+}

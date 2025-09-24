@@ -66,11 +66,6 @@ body {
   color: #666666;
   overflow-x: hidden; }
 
-a {
-  outline: medium none !important;
-  color: #efb225;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
   a:focus {
     color: #052c52;
     text-decoration: none !important; }
@@ -618,8 +613,8 @@ iframe {
           box-shadow: 0px 4px 10px 0px rgba(5, 44, 82, 0.13); }
 
 .box-shadow-flat {
-  -webkit-box-shadow: 20px 22px 0px 0px #efb225;
-          box-shadow: 20px 22px 0px 0px #efb225; }
+  -webkit-box-shadow: 20px 22px 0px 0px #347843;
+          box-shadow: 20px 22px 0px 0px #347843; }
 
 /* Overflow */
 .overflowx-h {
@@ -915,8 +910,8 @@ iframe {
     display: none; }
   /* box shadow */
   .box-shadow-flat {
-    -webkit-box-shadow: 15px 17px 0px 0px #efb225;
-            box-shadow: 15px 17px 0px 0px #efb225; } }
+    -webkit-box-shadow: 15px 17px 0px 0px #347843;
+            box-shadow: 15px 17px 0px 0px #347843; } }
 
 @media (max-width: 767px) {
   /* Page Section Padding */
@@ -939,8 +934,8 @@ iframe {
     border: none !important; }
   /* box shadow */
   .box-shadow-flat {
-    -webkit-box-shadow: 10px 12px 0px 0px #efb225;
-            box-shadow: 10px 12px 0px 0px #efb225; }
+    -webkit-box-shadow: 10px 12px 0px 0px #347843;
+            box-shadow: 10px 12px 0px 0px #347843; }
   /* Request a quote */
   .request-a-quote {
     background-image: inherit !important; } }
@@ -2088,7 +2083,7 @@ ul.list {
       bottom: 15px; }
     .progress-style-01 .progress-item .progress .progress-bar {
       overflow: inherit;
-      background-color: #efb225; }
+      background-color: #347843; }
 
 /*****************************
 	Range Slider
@@ -2934,8 +2929,6 @@ ul.list {
   Header
 *****************************/
 /* Header style 01 */
-.header {
-  background-color:#347843; }
   .header .navbar .navbar-nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -2952,8 +2945,7 @@ ul.list {
       text-transform: capitalize;
       font-size: 14px;
       font-weight: 500; }
-      .header .navbar .navbar-nav li > a:hover {
-        color: #efb225; }
+      
       .header .navbar .navbar-nav li > a i {
         margin-left: 5px;
         font-size: 10px; }
@@ -2967,20 +2959,12 @@ ul.list {
       left: 0;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
-      .header .navbar .navbar-nav .nav-link:hover {
-        color: #efb225; }
-      .header .navbar .navbar-nav .nav-link i {
-        font-weight: bold; }
-      .header .navbar .navbar-nav .nav-link:hover {
-        color: #efb225; }
   .header .navbar .nav-item {
     margin-right: 20px; }
     .header .navbar .nav-item:last-child {
       margin-right: 0px; }
   .header .navbar .nav-item.megamenu-nav-area {
     position: inherit; }
-  .header .navbar .nav-item.active .nav-link {
-    color: #efb225; }
   .header .navbar-brand {
     padding: 0px;
     margin-right: 0;
@@ -3018,7 +3002,7 @@ ul.list {
   top: 0;
   z-index: 99;
   width: 100%;
-  background-color:#347843;
+  background-color:white;
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.11);
           box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.11);
   padding: 0px; }
@@ -3028,8 +3012,6 @@ ul.list {
     display: block; }
   .header.is-sticky .navbar .navbar-nav .nav-link {
     color: #ffffff; }
-  .header.is-sticky .navbar .nav-item.active .nav-link {
-    color: #efb225; }
   .header.is-sticky .navbar-collapse {
     -webkit-box-pack: end !important;
         -ms-flex-pack: end !important;
@@ -3403,8 +3385,6 @@ ul.list {
       padding: 0px; }
       .header.is-sticky.default .header-bottom .navbar .navbar-nav .nav-link {
         color: #052c52; }
-      .header.is-sticky.default .header-bottom .navbar .nav-item.active .nav-link {
-        color: #efb225; }
   /* Header Style 02 */
   .header-transparent {
     position: inherit;
@@ -4475,9 +4455,6 @@ iframe.map {
       display: -ms-flexbox;
       display: flex;
       color: #666666; }
-      .navigation .nav-links .nav-previous a:hover .pagi-text {
-        color: #ffffff;
-        background: #efb225; }
     .navigation .nav-links .nav-previous .nav-title {
       text-overflow: ellipsis;
       overflow: hidden;
@@ -4502,9 +4479,6 @@ iframe.map {
       display: flex;
       color: #666666;
       padding-left: 15px; }
-      .navigation .nav-links .nav-next a:hover .pagi-text {
-        color: #ffffff;
-        background: #efb225; }
     .navigation .nav-links .nav-next .nav-title {
       text-overflow: ellipsis;
       overflow: hidden;

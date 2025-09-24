@@ -27,3 +27,6 @@
 .animate-on-scroll.delay-3 {
   transition-delay: 300ms;
 }
+i{
+  color:#347843;
+}

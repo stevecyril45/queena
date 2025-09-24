@@ -26,7 +26,7 @@
           <td>{{ record.name }}</td>
           <td>{{ record.email }}</td>
           <td>{{ record.subject }}</td>
-          <td>{{ record.message }}</td>
+          <td class="message-cell">{{ record.message }}</td>
           <td class="print-hidden">
             <button class="btn-delete" (click)="confirmDeleteRecord(record)">Delete</button>
           </td>
@@ -37,9 +37,9 @@
 
   <!-- Pagination Controls -->
   <div class="pagination-controls print-hidden">
-    <button (click)="prevPage()" [disabled]="currentPage === 1">Prev</button>
+    <button (click)="prevPage()" [disabled]="currentPage === 1" class="text-success">Prev</button>
     <span>Page {{ currentPage }} of {{ totalPages }}</span>
-    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages" class="text-success">Next</button>
   </div>
 
 </div>

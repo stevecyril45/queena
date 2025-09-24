@@ -81,11 +81,6 @@
   opacity: 0.9;
 }
 
-.footer-links a:hover {
-  color: #f7a900;
-  opacity: 1;
-}
-
 /* Call Center & Social Media */
 .call-center h2 {
   font-size: 2rem;
