@@ -15,7 +15,7 @@ export class ServicesComponent implements AfterViewInit {
       nav: true,
       dots: false,
       autoplay: true,
-      autoplayTimeout: 4000,
+      autoplayTimeout: 7000,
       autoplayHoverPause: true,
       responsive: {
         0: { items: 1 },
