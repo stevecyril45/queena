@@ -19,7 +19,7 @@ export class LoginDashboardComponent {
 
   constructor(
     private router: Router,
-    private authService: AuthService // <-- inject service here
+    private authService: AuthService // 
   ) {}
 
   login() {
